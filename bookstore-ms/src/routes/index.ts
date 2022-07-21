@@ -1,5 +1,8 @@
+import { Router } from 'express';
 import { booksRoutes } from './books-routes';
 
-export {
-  booksRoutes
-}
+const routes = Router();
+
+routes.get('/books', booksRoutes.list);
+
+export { routes };

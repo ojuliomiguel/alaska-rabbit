@@ -1,9 +1,9 @@
 import express, { Request, Response}  from 'express';
-import { booksRoutes} from './routes/index'
+import { routes} from './routes'
 
 const app = express();
 
-app.use()
+app.use(routes)
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, world!');
